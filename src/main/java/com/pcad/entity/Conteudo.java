@@ -18,13 +18,17 @@ public class Conteudo {
     private String descricao;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "tipo")
     private TipoConteudo tipoConteudo;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "categoria")
     private CategoriaConteudo categoriaConteudo;
 
+    @Column(name = "url_arquivo")
     private String urlArquivo;
 
+    @Column(name = "ultima_atualizacao")
     private LocalDateTime ultimaAtualizacao;
 
     public long getId() {

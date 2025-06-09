@@ -16,7 +16,7 @@ VALUES (
     1,
     'Alfabetização para adultos',
     'Este conteúdo foi elaborado especialmente para apoiar o processo de alfabetização de jovens e adultos que não tiveram acesso à escola na idade regular. Ele utiliza uma linguagem simples e contextualizada com o cotidiano rural, facilitando a compreensão e o engajamento dos alunos.O material inclui orientações básicas sobre leitura e escrita, com exercícios práticos e exemplos baseados na realidade do campo. Serve tanto para aprendizado individual quanto para uso em rodas de leitura comunitárias ou atividades mediadas por agentes locais.',
-    'TEXTOs',
+    'TEXTO',
     'EDUCACAO',
     NULL,
     '2025-05-20T08:00:00'
