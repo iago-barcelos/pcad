@@ -6,6 +6,7 @@ import com.pcad.entity.Conteudo;
 import com.pcad.repository.ConteudoRepository;
 import com.pcad.service.interfaces.IConteudoService;
 import com.pcad.specification.ConteudoSpecification;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -26,5 +27,11 @@ public class ConteudoService implements IConteudoService {
         Specification<Conteudo> spec = ConteudoSpecification.comFiltros(filtro);
 
         return conteudoRepository.findAll(spec).stream().map(FiltrarConteudoResponse:: fromEntity).toList();
+    }
+
+    @Override
+    public FiltrarConteudoResponse buscarConteudoPorId(long id) {
+        Conteudo conteudo = conteudoRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Conteudo não foi encontrado"));
+        return FiltrarConteudoResponse.fromEntity(conteudo);
     }
 }

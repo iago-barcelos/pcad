@@ -17,10 +17,10 @@ public class Conteudo {
     @Column(length = 1000)
     private String descricao;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private TipoConteudo tipoConteudo;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private CategoriaConteudo categoriaConteudo;
 
     private String urlArquivo;

@@ -21,9 +21,14 @@ public class ConteudoController {
         this.conteudoService = conteudoService;
     }
 
-    @GetMapping
+    @GetMapping("conteudos")
     public ResponseEntity<List<FiltrarConteudoResponse>> listarConteudo(FiltrarConteudoRequest filtro) {
         List<FiltrarConteudoResponse> conteudos = conteudoService.filtrar(filtro);
         return ResponseEntity.ok(conteudos);
+    }
+
+    @GetMapping("conteudo/{id}")
+    public ResponseEntity<FiltrarConteudoResponse> buscarConteudoPorId(long id) {
+        return ResponseEntity.ok(conteudoService.buscarConteudoPorId(id));
     }
 }

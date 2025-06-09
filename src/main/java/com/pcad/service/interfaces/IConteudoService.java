@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface IConteudoService {
     List<FiltrarConteudoResponse> filtrar(FiltrarConteudoRequest filtro);
+
+    FiltrarConteudoResponse buscarConteudoPorId(long id);
 }
